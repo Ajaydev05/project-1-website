@@ -25,6 +25,9 @@ services:
  nginx:
   image: nginx:alpine
   container_name: nginx
+   depends_on:
+      - frontend
+      - backend
   volumes:
    - ./nginx:/etc/nginx/conf.d
   ports:
@@ -34,5 +37,6 @@ services:
 networks: 
  app-network:
   driver: bridge
+
 
 

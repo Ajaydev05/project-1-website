@@ -10,7 +10,7 @@ services:
    - app-network
  backend:
   build: ./backend
-  container_name: back
+  container_name: backend
   depends_on:
    - db
   environment:
@@ -19,7 +19,7 @@ services:
    - app-network
  frontend:
   build: ./frontend
-  container_name: front
+  container_name: frontend
   networks:
    - app-network
  nginx:
@@ -37,6 +37,7 @@ services:
 networks: 
  app-network:
   driver: bridge
+
 
 
 

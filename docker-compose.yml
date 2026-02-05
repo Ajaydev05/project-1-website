@@ -25,7 +25,7 @@ services:
  nginx:
   image: nginx:alpine
   container_name: nginx
-   depends_on:
+  depends_on:
       - frontend
       - backend
   volumes:
@@ -37,6 +37,7 @@ services:
 networks: 
  app-network:
   driver: bridge
+
 
 
 
